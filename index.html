@@ -1,4 +1,4 @@
-html_content = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,14 +9,15 @@ html_content = '''<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #FF3366;
-            --primary-dark: #E62E5C;
-            --secondary: #1A1A2E;
-            --accent: #00D9C0;
-            --light: #F8F9FC;
-            --dark: #0F0F1A;
+            --primary: #7A9E8E;
+            --primary-dark: #5a7e6e;
+            --secondary: #1a1a2e;
+            --accent: #c4a77d;
+            --light: #f5f5f0;
+            --dark: #0f0f1a;
+            --cream: #faf9f6;
             --gray: #6B7280;
-            --border: rgba(255,255,255,0.08);
+            --border: rgba(122,158,142,0.15);
             --glass: rgba(255,255,255,0.03);
         }
 
@@ -43,7 +44,6 @@ html_content = '''<!DOCTYPE html>
             font-weight: 700;
         }
 
-        /* Animated Background */
         .bg-gradient {
             position: fixed;
             top: 0;
@@ -52,8 +52,8 @@ html_content = '''<!DOCTYPE html>
             height: 100%;
             z-index: -1;
             background: 
-                radial-gradient(ellipse at 20% 20%, rgba(255,51,102,0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(0,217,192,0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 20%, rgba(122,158,142,0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(196,167,125,0.08) 0%, transparent 50%),
                 radial-gradient(ellipse at 50% 50%, rgba(26,26,46,1) 0%, rgba(15,15,26,1) 100%);
         }
 
@@ -71,7 +71,7 @@ html_content = '''<!DOCTYPE html>
         .shape {
             position: absolute;
             border-radius: 50%;
-            opacity: 0.05;
+            opacity: 0.04;
             animation: float 20s infinite ease-in-out;
         }
 
@@ -108,7 +108,6 @@ html_content = '''<!DOCTYPE html>
             66% { transform: translate(-20px, 20px) scale(0.9); }
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -205,7 +204,7 @@ html_content = '''<!DOCTYPE html>
         .nav-cta:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255,51,102,0.3);
+            box-shadow: 0 10px 30px rgba(122,158,142,0.3);
         }
 
         .mobile-menu-btn {
@@ -217,7 +216,6 @@ html_content = '''<!DOCTYPE html>
             cursor: pointer;
         }
 
-        /* Hero */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -308,7 +306,7 @@ html_content = '''<!DOCTYPE html>
         .btn-primary:hover {
             background: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255,51,102,0.4);
+            box-shadow: 0 15px 40px rgba(122,158,142,0.4);
         }
 
         .btn-secondary {
@@ -368,7 +366,6 @@ html_content = '''<!DOCTYPE html>
             }
         }
 
-        /* Section Styles */
         section {
             padding: 6rem 2rem;
             position: relative;
@@ -403,7 +400,6 @@ html_content = '''<!DOCTYPE html>
             font-size: 1.1rem;
         }
 
-        /* Services */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -440,13 +436,13 @@ html_content = '''<!DOCTYPE html>
 
         .service-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(255,255,255,0.15);
+            border-color: rgba(122,158,142,0.3);
             box-shadow: 0 30px 60px rgba(0,0,0,0.3);
         }
 
         .service-card.featured {
             border-color: var(--primary);
-            background: linear-gradient(135deg, rgba(255,51,102,0.1), rgba(0,217,192,0.05));
+            background: linear-gradient(135deg, rgba(122,158,142,0.1), rgba(196,167,125,0.05));
         }
 
         .service-card.featured .badge {
@@ -549,7 +545,6 @@ html_content = '''<!DOCTYPE html>
             background: var(--primary-dark);
         }
 
-        /* Portfolio */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -562,7 +557,7 @@ html_content = '''<!DOCTYPE html>
             position: relative;
             border-radius: 20px;
             overflow: hidden;
-            aspect-ratio: 4/3;
+            aspect-ratio: 1;
             background: var(--secondary);
             cursor: pointer;
             transition: all 0.4s ease;
@@ -611,29 +606,6 @@ html_content = '''<!DOCTYPE html>
             color: var(--accent);
         }
 
-        .portfolio-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--secondary), var(--dark));
-            border: 2px dashed var(--border);
-            gap: 1rem;
-        }
-
-        .portfolio-placeholder .ph-icon {
-            font-size: 3rem;
-            opacity: 0.3;
-        }
-
-        .portfolio-placeholder p {
-            color: rgba(255,255,255,0.4);
-            font-size: 0.9rem;
-        }
-
-        /* Process */
         .process-steps {
             display: flex;
             justify-content: center;
@@ -707,7 +679,6 @@ html_content = '''<!DOCTYPE html>
             }
         }
 
-        /* Testimonials */
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -772,7 +743,6 @@ html_content = '''<!DOCTYPE html>
             color: rgba(255,255,255,0.5);
         }
 
-        /* FAQ */
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
@@ -788,7 +758,7 @@ html_content = '''<!DOCTYPE html>
         }
 
         .faq-item:hover {
-            border-color: rgba(255,255,255,0.15);
+            border-color: rgba(122,158,142,0.3);
         }
 
         .faq-question {
@@ -822,12 +792,11 @@ html_content = '''<!DOCTYPE html>
 
         .faq-item.active .faq-answer {
             padding: 0 2rem 1.5rem;
-            max-height: 200px;
+            max-height: 300px;
         }
 
-        /* Contact */
         .contact-section {
-            background: linear-gradient(135deg, rgba(255,51,102,0.1), rgba(0,217,192,0.05));
+            background: linear-gradient(135deg, rgba(122,158,142,0.1), rgba(196,167,125,0.05));
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
@@ -965,10 +934,9 @@ html_content = '''<!DOCTYPE html>
         .submit-btn:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255,51,102,0.3);
+            box-shadow: 0 10px 30px rgba(122,158,142,0.3);
         }
 
-        /* Footer */
         footer {
             padding: 3rem 2rem;
             text-align: center;
@@ -1012,7 +980,6 @@ html_content = '''<!DOCTYPE html>
             transform: translateY(-3px);
         }
 
-        /* Mobile Menu */
         .mobile-menu {
             position: fixed;
             top: 0;
@@ -1077,7 +1044,6 @@ html_content = '''<!DOCTYPE html>
             cursor: pointer;
         }
 
-        /* Scroll Reveal */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -1089,7 +1055,6 @@ html_content = '''<!DOCTYPE html>
             transform: translateY(0);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .nav-links, .nav-cta {
                 display: none;
@@ -1122,7 +1087,6 @@ html_content = '''<!DOCTYPE html>
             }
         }
 
-        /* WhatsApp Float Button */
         .whatsapp-float {
             position: fixed;
             bottom: 2rem;
@@ -1173,10 +1137,76 @@ html_content = '''<!DOCTYPE html>
             opacity: 1;
             visibility: visible;
         }
+
+        .about-section {
+            background: linear-gradient(135deg, rgba(122,158,142,0.05), rgba(196,167,125,0.03));
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .about-stat {
+            text-align: center;
+        }
+
+        .about-stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .about-stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Background -->
     <div class="bg-gradient"></div>
     <div class="floating-shapes">
         <div class="shape"></div>
@@ -1184,12 +1214,12 @@ html_content = '''<!DOCTYPE html>
         <div class="shape"></div>
     </div>
 
-    <!-- Navigation -->
     <nav id="navbar">
         <a href="#" class="logo">
             Printa<span class="logo-dot"></span>
         </a>
         <ul class="nav-links">
+            <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#process">Process</a></li>
@@ -1201,11 +1231,11 @@ html_content = '''<!DOCTYPE html>
         <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
     </nav>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu-overlay" onclick="toggleMenu()"></div>
     <div class="mobile-menu" id="mobileMenu">
         <button class="close-menu" onclick="toggleMenu()">✕</button>
         <ul>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
             <li><a href="#services" onclick="toggleMenu()">Services</a></li>
             <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
             <li><a href="#process" onclick="toggleMenu()">Process</a></li>
@@ -1215,7 +1245,6 @@ html_content = '''<!DOCTYPE html>
         </ul>
     </div>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">
@@ -1252,7 +1281,34 @@ html_content = '''<!DOCTYPE html>
         </div>
     </section>
 
-    <!-- Services -->
+    <section id="about" class="about-section">
+        <div class="about-grid">
+            <div class="about-image reveal">
+                <img src="1000014208.png" alt="Printa Design Studio">
+            </div>
+            <div class="about-content reveal">
+                <div class="section-tag">About Us</div>
+                <h2>Grow Your Business With Us</h2>
+                <p>Welcome to our digital design studio! We are a creative, tech-focused design team dedicated to helping local businesses stand out and grow.</p>
+                <p>By blending modern technology with eye-catching visuals, we create high-quality WhatsApp flyers, social media posters, and engaging short video ads that turn scrollers into customers.</p>
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <div class="about-stat-number">4</div>
+                        <div class="about-stat-label">Packages</div>
+                    </div>
+                    <div class="about-stat">
+                        <div class="about-stat-number">24h</div>
+                        <div class="about-stat-label">Delivery</div>
+                    </div>
+                    <div class="about-stat">
+                        <div class="about-stat-number">100%</div>
+                        <div class="about-stat-label">Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="services">
         <div class="section-header reveal">
             <div class="section-tag">Our Services</div>
@@ -1271,7 +1327,7 @@ html_content = '''<!DOCTYPE html>
                     <li>2 revision rounds</li>
                     <li>24-hour delivery</li>
                 </ul>
-                <a href="https://wa.me/27YOURNUMBER?text=Hi%20Printa!%20I'm%20interested%20in%20the%20WhatsApp%20Flyer%20package%20(R150)." class="service-cta">Book This Package</a>
+                <a href="https://wa.me/27610835711?text=Hi%20Printa!%20I'm%20interested%20in%20the%20WhatsApp%20Flyer%20package%20(R150)." class="service-cta">Book This Package</a>
             </div>
 
             <div class="service-card reveal">
@@ -1285,7 +1341,7 @@ html_content = '''<!DOCTYPE html>
                     <li>2 revision rounds</li>
                     <li>24-hour delivery</li>
                 </ul>
-                <a href="https://wa.me/27YOURNUMBER?text=Hi%20Printa!%20I'm%20interested%20in%20the%20Social%20Media%20Square%20package%20(R150)." class="service-cta">Book This Package</a>
+                <a href="https://wa.me/27610835711?text=Hi%20Printa!%20I'm%20interested%20in%20the%20Social%20Media%20Square%20package%20(R150)." class="service-cta">Book This Package</a>
             </div>
 
             <div class="service-card reveal">
@@ -1299,7 +1355,7 @@ html_content = '''<!DOCTYPE html>
                     <li>3 revision rounds</li>
                     <li>3-5 day delivery</li>
                 </ul>
-                <a href="https://wa.me/27YOURNUMBER?text=Hi%20Printa!%20I'm%20interested%20in%20the%20TikTok%20Video%20Ad%20package%20(R350)." class="service-cta">Book This Package</a>
+                <a href="https://wa.me/27610835711?text=Hi%20Printa!%20I'm%20interested%20in%20the%20TikTok%20Video%20Ad%20package%20(R350)." class="service-cta">Book This Package</a>
             </div>
 
             <div class="service-card featured reveal">
@@ -1316,12 +1372,11 @@ html_content = '''<!DOCTYPE html>
                     <li>Unlimited revisions</li>
                     <li>Priority delivery</li>
                 </ul>
-                <a href="https://wa.me/27YOURNUMBER?text=Hi%20Printa!%20I'm%20interested%20in%20the%20Ultimate%20Combo%20package%20(R500)." class="service-cta">Get The Combo</a>
+                <a href="https://wa.me/27610835711?text=Hi%20Printa!%20I'm%20interested%20in%20the%20Ultimate%20Combo%20package%20(R500)." class="service-cta">Get The Combo</a>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio -->
     <section id="portfolio">
         <div class="section-header reveal">
             <div class="section-tag">Our Work</div>
@@ -1330,69 +1385,55 @@ html_content = '''<!DOCTYPE html>
         </div>
         <div class="portfolio-grid">
             <div class="portfolio-item reveal">
-                <div class="portfolio-placeholder">
-                    <div class="ph-icon">📱</div>
-                    <p>WhatsApp Flyer<br><small>Replace with your design</small></p>
-                </div>
+                <img src="1000014284.png" alt="Printa Services Flyer">
                 <div class="portfolio-overlay">
-                    <h4>Weekend Special Flyer</h4>
+                    <h4>Printa Services Flyer</h4>
                     <p>WhatsApp Flyer • R150</p>
                 </div>
             </div>
             <div class="portfolio-item reveal">
-                <div class="portfolio-placeholder">
-                    <div class="ph-icon">🖼️</div>
-                    <p>Social Media Square<br><small>Replace with your design</small></p>
-                </div>
+                <img src="1000014208.png" alt="Brand Campaign">
                 <div class="portfolio-overlay">
-                    <h4>Brand Launch Post</h4>
+                    <h4>Grow Your Business Campaign</h4>
                     <p>Social Media Square • R150</p>
                 </div>
             </div>
             <div class="portfolio-item reveal">
-                <div class="portfolio-placeholder">
-                    <div class="ph-icon">🎬</div>
-                    <p>TikTok Video Ad<br><small>Replace with your design</small></p>
-                </div>
+                <img src="1000014207.png" alt="Logo Design">
                 <div class="portfolio-overlay">
-                    <h4>Product Showcase Ad</h4>
-                    <p>TikTok Video Ad • R350</p>
+                    <h4>UGO Modern Clothing Logo</h4>
+                    <p>Logo Design</p>
                 </div>
             </div>
             <div class="portfolio-item reveal">
-                <div class="portfolio-placeholder">
-                    <div class="ph-icon">⭐</div>
-                    <p>Ultimate Combo<br><small>Replace with your design</small></p>
-                </div>
+                <img src="1000014203.jpg" alt="Brand Identity">
                 <div class="portfolio-overlay">
-                    <h4>Full Campaign Set</h4>
-                    <p>Ultimate Combo • R500</p>
+                    <h4>Lanara Collection Branding</h4>
+                    <p>Brand Identity</p>
                 </div>
             </div>
             <div class="portfolio-item reveal">
-                <div class="portfolio-placeholder">
-                    <div class="ph-icon">📱</div>
-                    <p>WhatsApp Flyer<br><small>Replace with your design</small></p>
-                </div>
+                <img src="1000014283.png" alt="Printa Logo">
                 <div class="portfolio-overlay">
-                    <h4>Event Promotion</h4>
-                    <p>WhatsApp Flyer • R150</p>
+                    <h4>Printa Brand Identity</h4>
+                    <p>Logo Design</p>
                 </div>
             </div>
             <div class="portfolio-item reveal">
-                <div class="portfolio-placeholder">
-                    <div class="ph-icon">🖼️</div>
-                    <p>Social Media Square<br><small>Replace with your design</small></p>
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1a2e,#0f0f1a);border:2px dashed var(--border);">
+                    <div style="text-align:center;color:rgba(255,255,255,0.4);">
+                        <div style="font-size:3rem;margin-bottom:1rem;">✨</div>
+                        <p>Your Next Project<br><small>Let's create something amazing</small></p>
+                    </div>
                 </div>
                 <div class="portfolio-overlay">
-                    <h4>Holiday Special</h4>
-                    <p>Social Media Square • R150</p>
+                    <h4>Your Project Here</h4>
+                    <p>Book Now</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process -->
     <section id="process">
         <div class="section-header reveal">
             <div class="section-tag">How It Works</div>
@@ -1420,7 +1461,6 @@ html_content = '''<!DOCTYPE html>
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section id="testimonials">
         <div class="section-header reveal">
             <div class="section-tag">Testimonials</div>
@@ -1461,7 +1501,6 @@ html_content = '''<!DOCTYPE html>
         </div>
     </section>
 
-    <!-- FAQ -->
     <section id="faq">
         <div class="section-header reveal">
             <div class="section-tag">FAQ</div>
@@ -1507,6 +1546,15 @@ html_content = '''<!DOCTYPE html>
             </div>
             <div class="faq-item reveal">
                 <div class="faq-question" onclick="toggleFaq(this)">
+                    What payment methods do you accept?
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    We accept EFT to our Nedbank account (Account: 1338722743, Branch: 198765, Account Holder: printa), PayPal, and instant EFT via PayFast. For your security, we require 50% deposit upfront and 50% on delivery for first-time clients.
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question" onclick="toggleFaq(this)">
                     Do you offer bulk or subscription discounts?
                     <span class="icon">+</span>
                 </div>
@@ -1514,46 +1562,46 @@ html_content = '''<!DOCTYPE html>
                     Yes! We offer special rates for businesses that need regular content. Contact us for a custom monthly package tailored to your posting schedule and budget.
                 </div>
             </div>
-            <div class="faq-item reveal">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    What payment methods do you accept?
-                    <span class="icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    We accept EFT (bank transfer), PayPal, and instant EFT via PayFast. For your security, we require 50% deposit upfront and 50% on delivery for first-time clients.
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="contact-section">
         <div class="contact-grid">
             <div class="contact-info reveal">
                 <h2>Ready to Stand Out?</h2>
                 <p>Let's create something amazing for your business. Reach out and we'll get back to you within 2 hours during business hours.</p>
                 <div class="contact-methods">
-                    <a href="https://wa.me/27YOURNUMBER" class="contact-method">
+                    <a href="https://wa.me/27610835711" class="contact-method">
                         <div class="icon">💬</div>
                         <div class="details">
                             <h4>WhatsApp Business</h4>
                             <p>Fastest response — usually within minutes</p>
                         </div>
                     </a>
-                    <a href="mailto:hello@printa.co.za" class="contact-method">
+                    <a href="mailto:printa.hello@gmail.com" class="contact-method">
                         <div class="icon">✉️</div>
                         <div class="details">
                             <h4>Email Us</h4>
-                            <p>hello@printa.co.za</p>
+                            <p>printa.hello@gmail.com</p>
                         </div>
                     </a>
-                    <a href="tel:+27YOURNUMBER" class="contact-method">
+                    <a href="tel:+27610835711" class="contact-method">
                         <div class="icon">📞</div>
                         <div class="details">
                             <h4>Call Us</h4>
                             <p>Mon–Fri, 9am–6pm SAST</p>
                         </div>
                     </a>
+                </div>
+                <div style="margin-top:2rem;padding:1.5rem;background:var(--glass);border:1px solid var(--border);border-radius:16px;">
+                    <h4 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:1rem;">Banking Details</h4>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem 2rem;font-size:0.85rem;">
+                        <div style="display:flex;justify-content:space-between;"><span style="color:rgba(255,255,255,0.5);">Account Holder</span><span style="font-weight:600;">printa</span></div>
+                        <div style="display:flex;justify-content:space-between;"><span style="color:rgba(255,255,255,0.5);">Bank</span><span style="font-weight:600;">Nedbank</span></div>
+                        <div style="display:flex;justify-content:space-between;"><span style="color:rgba(255,255,255,0.5);">Account Number</span><span style="font-weight:600;">1338722743</span></div>
+                        <div style="display:flex;justify-content:space-between;"><span style="color:rgba(255,255,255,0.5);">Account Type</span><span style="font-weight:600;">Current Account</span></div>
+                        <div style="display:flex;justify-content:space-between;"><span style="color:rgba(255,255,255,0.5);">Branch Code</span><span style="font-weight:600;">198765</span></div>
+                    </div>
                 </div>
             </div>
             <div class="contact-form reveal">
@@ -1587,7 +1635,6 @@ html_content = '''<!DOCTYPE html>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <a href="#" class="logo">
             Printa<span class="logo-dot"></span>
@@ -1601,14 +1648,12 @@ html_content = '''<!DOCTYPE html>
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/27YOURNUMBER?text=Hi%20Printa!%20I'm%20interested%20in%20your%20design%20services." class="whatsapp-float">
+    <a href="https://wa.me/27610835711?text=Hi%20Printa!%20I'm%20interested%20in%20your%20design%20services." class="whatsapp-float">
         💬
         <span class="whatsapp-tooltip">Chat on WhatsApp</span>
     </a>
 
     <script>
-        // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
@@ -1618,29 +1663,22 @@ html_content = '''<!DOCTYPE html>
             }
         });
 
-        // Mobile menu
         function toggleMenu() {
             document.getElementById('mobileMenu').classList.toggle('active');
             document.querySelector('.mobile-menu-overlay').classList.toggle('active');
         }
 
-        // FAQ toggle
         function toggleFaq(element) {
             const item = element.parentElement;
             const isActive = item.classList.contains('active');
-            
-            // Close all
             document.querySelectorAll('.faq-item').forEach(faq => {
                 faq.classList.remove('active');
             });
-            
-            // Open clicked if it wasn't active
             if (!isActive) {
                 item.classList.add('active');
             }
         }
 
-        // Scroll reveal
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1658,7 +1696,6 @@ html_content = '''<!DOCTYPE html>
             observer.observe(el);
         });
 
-        // Form submission
         function handleSubmit(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
@@ -1676,15 +1713,9 @@ html_content = '''<!DOCTYPE html>
             
             const whatsappMessage = `Hi Printa! My name is ${name} from ${business || 'N/A'}. I'm interested in the ${serviceNames[service]}. ${message ? 'Details: ' + message : ''}`;
             
-            window.open(`https://wa.me/27YOURNUMBER?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+            window.open(`https://wa.me/27610835711?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
         }
     </script>
 </body>
-</html>'''
+</html>
 
-# Save the HTML file
-with open('/mnt/agents/output/printa_website.html', 'w', encoding='utf-8') as f:
-    f.write(html_content)
-
-print("✅ Printa website saved successfully!")
-print(f"📄 File size: {len(html_content):,} characters")
